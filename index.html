@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Tasks Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+  <header>
+          <button id="myTasksBtn" class="active">My Tasks</button>
+          <button id="completedTasksBtn">Completed Tasks</button>
+      </header>
+      <main id="main">
+          <div id="myTasksPage">
+              <button id="addTaskBtn">Add a Task</button>
+              <div id="addTaskModal" class="modal">
+                  <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <input type="text" id="taskInput" placeholder="Enter task...">
+                      <input type="date" id="dateInput">
+                      <button id="saveTaskBtn">Save Task</button>
+                  </div>
+              </div>
+              <table id="myTasksTable" class="task-table">
+                  <!-- Tasks will be dynamically added here -->
+              </table>
+          </div>
+          <div id="completedTasksPage" style="display: none;">
+              <table id="completedTasksTable" class="task-table">
+                  <!-- Completed tasks will be dynamically added here -->
+              </table>
+              <button id="deleteCompletedBtn">Delete Selected</button>
+          </div>
+      </main>
+<script src="script.js"></script>
+</body>
+</html>
